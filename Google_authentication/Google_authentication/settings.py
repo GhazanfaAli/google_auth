@@ -31,7 +31,8 @@ SECRET_KEY = 'django-insecure-=&y6$m*=3te=x(49o(!6o&_is97q^h$f06g9i8fu4z==_kk*w5
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost']
+
 
 # Application definition
 SITE_ID = 4
@@ -175,3 +176,4 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 
 
 GOOGLE_OAUTH_CALLBACK_URL = 'https://google-auth-drab.vercel.app/api/v1/auth/google/callback/'
+
