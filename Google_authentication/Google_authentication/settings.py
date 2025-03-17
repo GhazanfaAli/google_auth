@@ -157,6 +157,8 @@ SOCIALACCOUNT_PROVIDERS = {
         'AUTH_PARAMS': {
             'access_type':'online',
         },
+        'REDIRECT_URL': 'https://google-auth-drab.vercel.app/accounts/google/login/callback/'
+
 
     }
 }
