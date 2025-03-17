@@ -172,4 +172,4 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 
 
 
-GOOGLE_OAUTH_CALLBACK_URL = 'http://localhost:8000/api/v1/auth/google/callback/'  # Adjust this URL as needed
+GOOGLE_OAUTH_CALLBACK_URL = 'https://google-auth-drab.vercel.app/api/v1/auth/google/callback/'
