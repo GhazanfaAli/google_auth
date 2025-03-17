@@ -162,12 +162,7 @@ SOCIALACCOUNT_PROVIDERS = {
         'AUTH_PARAMS': {
             'access_type':'online',
         },
-<<<<<<< HEAD
-        "google-auth-git-main-ghazanfar-alis-projects-dcaacf05.vercel.app",
-=======
-        'REDIRECT_URL': 'https://google-auth-git-main-ghazanfar-alis-projects-dcaacf05.vercel.app/accounts/google/login/callback/',
 
->>>>>>> 1790157 (Resolved merge conflicts)
     }
 }
 
