@@ -9,5 +9,11 @@
             "src": "/(.*)",
             "dest": "Google_authentication/wsgi.py"
         }
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
     ]
 }
