@@ -157,7 +157,8 @@ SOCIALACCOUNT_PROVIDERS = {
         },
         'AUTH_PARAMS': {
             'access_type':'online',
-        }
+        },
+        "google-auth-git-main-ghazanfar-alis-projects-dcaacf05.vercel.app",
     }
 }
 
