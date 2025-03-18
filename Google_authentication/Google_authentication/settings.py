@@ -158,7 +158,8 @@ SOCIALACCOUNT_PROVIDERS = {
         'AUTH_PARAMS': {
             'access_type':'online',
         },
-        'REDIRECT_URL': 'https://google-auth-drab.vercel.app/accounts/google/login/callback/'
+       # 'REDIRECT_URL': 'https://google-auth-drab.vercel.app/accounts/google/login/callback/'
+    'REDIRECT_URL': f"{os.getenv('URL', '')}/accounts/google/login/callback/"
 
 
     }
@@ -175,7 +176,7 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 
 
 
-GOOGLE_OAUTH_CALLBACK_URL = 'https://google-auth-drab.vercel.app/api/v1/auth/google/callback/'
+GOOGLE_OAUTH_CALLBACK_URL =  f"{os.getenv('URL', '')}/accounts/google/login/callback/"
 
 # http://127.0.0.1:8000/accounts/google/login/callback/
 # http://127.0.0.1:8000
