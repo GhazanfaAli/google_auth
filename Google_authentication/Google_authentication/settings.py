@@ -15,6 +15,8 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+
+
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -184,3 +186,11 @@ GOOGLE_OAUTH_CALLBACK_URL =  f"{os.getenv('URL', '')}/accounts/google/login/call
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "/static/"
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "https://google-auth-n5ekpm1gh-ghazanfar-alis-projects-dcaacf05.vercel.app",
+    "https://google-auth-drab.vercel.app",
+]
+
