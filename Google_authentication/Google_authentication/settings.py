@@ -187,7 +187,7 @@ GOOGLE_OAUTH_CALLBACK_URL = f"https://{os.environ['URL']}/accounts/google/login/
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "/static/"
-
+   
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
