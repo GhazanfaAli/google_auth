@@ -1,11 +1,26 @@
 {
-    "builds": [{
-        "src": "Google_authentication/wsgi.py",
+    "builds": [
+      {
+        "src": "Google_authentication/asgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
-    "routes": [{
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9"
+        }
+      },
+      {
+        "src": "staticfiles/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "staticfiles/$1"
+      },
+      {
         "src": "/(.*)",
-        "dest": "Google_authentication/wsgi.py"
-    }]
-}
+        "dest": "Google_authentication/asgi.py"
+      }
+    ]
+  }
