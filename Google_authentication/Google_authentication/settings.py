@@ -161,7 +161,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type':'online',
         },
        # 'REDIRECT_URL': 'https://google-auth-drab.vercel.app/accounts/google/login/callback/'
-    'REDIRECT_URL': f"{os.getenv('URL', '')}/accounts/google/login/callback/"
+    'REDIRECT_URL': f"https://{os.environ['URL']}/accounts/google/login/callback/" # make sure to include https
 
 
     }
@@ -178,7 +178,8 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 
 
 
-GOOGLE_OAUTH_CALLBACK_URL =  f"{os.getenv('URL', '')}/accounts/google/login/callback/"
+GOOGLE_OAUTH_CALLBACK_URL = f"https://{os.environ['URL']}/accounts/google/login/callback/" # make sure to include https
+
 
 # http://127.0.0.1:8000/accounts/google/login/callback/
 # http://127.0.0.1:8000
@@ -192,5 +193,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "https://google-auth-n5ekpm1gh-ghazanfar-alis-projects-dcaacf05.vercel.app",
     "https://google-auth-drab.vercel.app",
+    f"https://{os.environ['URL']}" #use the environment variable.
+
 ]
 
