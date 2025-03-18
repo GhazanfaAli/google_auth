@@ -5,12 +5,11 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 import requests
-
-from django.urls import reverse
+import os
 
 from django.shortcuts import render
 
-
+PORT = os.getenv("PORT", "9000")
 
 
 def home(request):
@@ -26,6 +25,9 @@ class GoogleLoginCallback(APIView):
         if code is None:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
+        # token_endpoint_url = urljoin(f"http://localhost:{PORT}", reverse("google_login"))
+        # response = requests.post(url=token_endpoint_url, data={"code": code})
+        # return Response(response.json(), status=status.HTTP_200_OK)
         token_endpoint_url = request.build_absolute_uri(reverse("google_login"))
         response = requests.post(url=token_endpoint_url, data={"code": code})
-        return Response(response.json(), status=status.HTTP_200_OK)
+        return Response(response.json()), status=status.HTTP_200_OK
