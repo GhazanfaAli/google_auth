@@ -1,19 +1,12 @@
 {
     "builds": [{
-        "src": "Google_authentication/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+        "src": "Google_authentication/asgi.py",
+        "use": "@vercel/python"
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "Google_authentication/wsgi.py"
-        }
-    ],
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
+            "dest": "Google_authentication.asgi:application"
         }
     ]
 }
